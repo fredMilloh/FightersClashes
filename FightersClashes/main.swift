@@ -57,7 +57,6 @@ while player1.totalLivesPoint() > 0 && player2.totalLivesPoint() >= 0 {
     let foe = challenger.chooseFoe()
 
     while soldier.life > 0 && foe.life > 0 {
-        print("\n")
         print("it's \(soldier.name) turn to face \(foe.name)")
         player.chooseAction(soldier: soldier, foe: foe)
         if (foe.life > 0) {
@@ -71,7 +70,6 @@ while player1.totalLivesPoint() > 0 && player2.totalLivesPoint() >= 0 {
 
     if soldier.life > 0 {
         print("\(soldier.name) wins this round in \(numberOfMoves) moves")
-        print("\n")
         if player1.totalLivesPoint() > player2.totalLivesPoint() {
             player = player1
             challenger = player2
@@ -81,16 +79,15 @@ while player1.totalLivesPoint() > 0 && player2.totalLivesPoint() >= 0 {
         player = player2
         challenger = player1
     }
-    print("\n")
     numberOfMoves = 2
     numberOfRounds += 1
     
 }
 
 // status of the teams and winner of the game
-
-player1.teamStatus()
-player2.teamStatus()
+print("\n")
+player1.teamStatus(player: player1)
+player2.teamStatus(player: player2)
 
     if player1.fighters.count == 0 {
         print("The winner is \(player1.playerName) in \(numberOfRounds) rounds....congratulations !")

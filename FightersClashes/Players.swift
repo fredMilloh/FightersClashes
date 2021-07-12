@@ -21,6 +21,7 @@ class Players {
     
     func giveTeamName(index: Int, player: Players) {
         repeat {
+            print("\n")
             print("give a player name for team \(index + 1): ")
             player.playerName = readLine() ?? "rambo"
         } while player.playerName == "" || player.playerName == " " || player.playerName == "  "
@@ -34,7 +35,6 @@ class Players {
     func giveFighterName(category: FightersCategory) -> String {
         var nameFighter: String?
         repeat {
-            print("\n")
             print("Give a name to this \(category) :")
             nameFighter = readLine()
         } while nameFighter == "" || nameFighter == " " || nameFighter == "  "
@@ -150,9 +150,9 @@ class Players {
         return teamLives
     }
     
-    func teamStatus() {
+    func teamStatus(player: Players) {
+        print(" Status of \(player.playerName)'s team :")
         for fighter in player.fighters {
-            print(" Status of \(player.playerName)'s team :")
             print("  \(fighter.description())")
         }
         print("\n")

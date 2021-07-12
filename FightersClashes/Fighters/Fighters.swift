@@ -66,7 +66,7 @@ class Fighters {
             print("\(self.name) the \(self.category) can change his weapon")
             repeat {
                 for i in 1...allWeapons.count {
-                    if self.weapon.name != allWeapons[i].name {
+                    if self.weapon.name != allWeapons[i - 1].name {
                         print("\(i) = \(allWeapons[i - 1])")
                     }
                 }
