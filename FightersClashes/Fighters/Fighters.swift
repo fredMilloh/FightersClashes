@@ -10,38 +10,33 @@ import Foundation
 class Fighters {
     
     var name: String
-    var category: FightersCategory
-    var weapon: Weapons
+    var style: FighterStyle
+    var weapon: Weapon
     var life: Int
     
-    init(name: String, category: FightersCategory) {
+    init(name: String, style: FighterStyle, weapon: Weapon) {
         self.name = name
-        self.category = category
+        self.style = style
+        self.weapon = weapon
         
-        switch self.category {
+        switch self.style {
         case .archer:
-            self.weapon = Arc()
             self.life = 80
-        case .viking:
-            self.weapon = Dagger()
+        case .barbare:
             self.life = 70
         case .samurai:
-            self.weapon = Saber()
             self.life = 100
         case .gladiator:
-            self.weapon = Hatchet()
             self.life = 100
         case .knight:
-            self.weapon = Sword()
             self.life = 90
         case .mage:
-            self.weapon = Spectre()
             self.life = 120
         }
     }
     
     func description() -> String {
-        return ("\(self.name) the \(self.category) with \(self.life) points of life, his \(self.weapon.name) wounds of \(self.weapon.power) points.")
+        return ("\(self.name) the \(self.style) with \(self.life) points of life, his \(self.weapon.name) wounds of \(self.weapon.power) points.")
     }
     
     func hurt(foe: Fighters) {
@@ -55,24 +50,26 @@ class Fighters {
     
     func care() {
         self.life += 15
-        print("\(self.name) the \(self.category) has now 15 more life points !")
+        print("\(self.name) the \(self.style) has now 30 more life points !")
     }
     
-    func changePowerWeapon() {
-        let allWeapons = [Arc(), Sword(), Saber(), Hatchet(), Dagger(), Spectre()]
-        let randomNumber = Int.random(in: 1...100)
-        var newWeapon: Int?
-        if self.life == randomNumber {
-            print("\(self.name) the \(self.category) can change his weapon")
+    func changeWeapon() {
+        let allWeapons: [WeaponsType] = [.bow, .dagger, .saber, .slicer, .spectre, .sword]
+        let randomWeapon = Int.random(in: 0...5)
+        let trunk = allWeapons[randomWeapon]
+        
+        if self.life < 35 {
+            print("\(self.name) the \(self.style) can change his weapon from a power of \(self.weapon.power) by a \(trunk) with \(self.weapon.power) power")
+            var choice: Int?
             repeat {
-                for i in 1...allWeapons.count {
-                    if self.weapon.name != allWeapons[i - 1].name {
-                        print("\(i) = \(allWeapons[i - 1])")
-                    }
-                }
-                newWeapon = Int(readLine()!)
-            } while newWeapon != 1 && newWeapon != 2 && newWeapon != 3 && newWeapon != 4 && newWeapon != 5 && newWeapon != 6
-            self.weapon.name = allWeapons[newWeapon! - 1].name
+                print("1 - yes, change my \(self.weapon.name) by : \(trunk)")
+                print("2 - no....thanks")
+                choice = Int(readLine()!)
+            } while choice != 1 && choice != 2
+            
+            if choice == 1 {
+                self.weapon = Weapon(type: trunk)
+            }
         }
     }
 }

@@ -6,7 +6,7 @@
 //
 
 
-enum FightersCategory: String {
-    case archer, viking, samurai, gladiator, knight, mage
+enum FighterStyle {
+    case archer, barbare, gladiator, knight, mage, samurai
 }
 
