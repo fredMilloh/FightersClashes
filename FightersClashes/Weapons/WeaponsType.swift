@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum WeaponsType: String, CaseIterable {
+enum WeaponsType: String {
     case bow, sword, saber, slicer, dagger, spectre
 }
