@@ -9,13 +9,20 @@
 /* Begin PBXBuildFile section */
 		B6092821268CABED00F897E5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092820268CABED00F897E5 /* main.swift */; };
 		B6092828268CAC1E00F897E5 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092827268CAC1E00F897E5 /* Weapon.swift */; };
-		B6092838268CAEAB00F897E5 /* FightersCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092837268CAEAB00F897E5 /* FightersCategory.swift */; };
+		B6092838268CAEAB00F897E5 /* FightersStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092837268CAEAB00F897E5 /* FightersStyle.swift */; };
 		B609283A268CAF1000F897E5 /* Fighters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092839268CAF1000F897E5 /* Fighters.swift */; };
 		B609283D268CC2ED00F897E5 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = B609283C268CC2ED00F897E5 /* Players.swift */; };
 		B609285E2693396800F897E5 /* FightersTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B609285D2693396800F897E5 /* FightersTestCase.swift */; };
 		B60928602693433000F897E5 /* PlayersTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B609285F2693433000F897E5 /* PlayersTestCase.swift */; };
 		B63115EB269CA6890029848E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63115EA269CA6890029848E /* Game.swift */; };
 		B631160C269DE5780029848E /* WeaponsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631160B269DE5780029848E /* WeaponsType.swift */; };
+		B631163B269F67FA0029848E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092820268CABED00F897E5 /* main.swift */; };
+		B631163C269F67FF0029848E /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = B609283C268CC2ED00F897E5 /* Players.swift */; };
+		B631163D269F68030029848E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63115EA269CA6890029848E /* Game.swift */; };
+		B631163E269F68070029848E /* FightersStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092837268CAEAB00F897E5 /* FightersStyle.swift */; };
+		B631163F269F68150029848E /* Fighters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092839268CAF1000F897E5 /* Fighters.swift */; };
+		B6311640269F681E0029848E /* WeaponsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631160B269DE5780029848E /* WeaponsType.swift */; };
+		B6311641269F68240029848E /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092827268CAC1E00F897E5 /* Weapon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,7 +41,7 @@
 		B609281D268CABED00F897E5 /* FightersClashes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FightersClashes; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6092820268CABED00F897E5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B6092827268CAC1E00F897E5 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
-		B6092837268CAEAB00F897E5 /* FightersCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightersCategory.swift; sourceTree = "<group>"; };
+		B6092837268CAEAB00F897E5 /* FightersStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightersStyle.swift; sourceTree = "<group>"; };
 		B6092839268CAF1000F897E5 /* Fighters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fighters.swift; sourceTree = "<group>"; };
 		B609283C268CC2ED00F897E5 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		B609285526903DC900F897E5 /* FightersClashesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightersClashesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				B6092820268CABED00F897E5 /* main.swift */,
-				B609283C268CC2ED00F897E5 /* Players.swift */,
 				B63115E9269CA67E0029848E /* Game */,
+				B609283C268CC2ED00F897E5 /* Players.swift */,
 				B609282A268CAC5200F897E5 /* Fighters */,
 				B6092829268CAC3000F897E5 /* Weapons */,
 			);
@@ -105,7 +112,7 @@
 		B609282A268CAC5200F897E5 /* Fighters */ = {
 			isa = PBXGroup;
 			children = (
-				B6092837268CAEAB00F897E5 /* FightersCategory.swift */,
+				B6092837268CAEAB00F897E5 /* FightersStyle.swift */,
 				B6092839268CAF1000F897E5 /* Fighters.swift */,
 			);
 			path = Fighters;
@@ -223,7 +230,7 @@
 				B6092828268CAC1E00F897E5 /* Weapon.swift in Sources */,
 				B631160C269DE5780029848E /* WeaponsType.swift in Sources */,
 				B63115EB269CA6890029848E /* Game.swift in Sources */,
-				B6092838268CAEAB00F897E5 /* FightersCategory.swift in Sources */,
+				B6092838268CAEAB00F897E5 /* FightersStyle.swift in Sources */,
 				B609283D268CC2ED00F897E5 /* Players.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,8 +239,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B631163F269F68150029848E /* Fighters.swift in Sources */,
+				B631163C269F67FF0029848E /* Players.swift in Sources */,
+				B631163D269F68030029848E /* Game.swift in Sources */,
+				B6311640269F681E0029848E /* WeaponsType.swift in Sources */,
 				B60928602693433000F897E5 /* PlayersTestCase.swift in Sources */,
 				B609285E2693396800F897E5 /* FightersTestCase.swift in Sources */,
+				B631163B269F67FA0029848E /* main.swift in Sources */,
+				B631163E269F68070029848E /* FightersStyle.swift in Sources */,
+				B6311641269F68240029848E /* Weapon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

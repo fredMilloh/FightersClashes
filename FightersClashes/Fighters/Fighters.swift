@@ -40,7 +40,6 @@ class Fighters {
     }
     
     func hurt(foe: Fighters) {
-            
         foe.life -= weapon.power
         if foe.life < 0 {
             foe.life = 0
@@ -49,26 +48,33 @@ class Fighters {
     }
     
     func care() {
-        self.life += 15
+        self.life += 30
         print("\(self.name) the \(self.style) has now 30 more life points !")
+    }
+ 
+// MARK: - Change Weapon
+    
+    private var trunk: Weapon {
+        let allWeapons: [Weapon] = [.init(type: .bow), .init(type: .dagger), .init(type: .saber), .init(type: .slicer), .init(type: .spectre), .init(type: .sword)]
+        let randomWeapon = Int.random(in: 0...5)
+        let trunk = allWeapons[randomWeapon]
+        return trunk
     }
     
     func changeWeapon() {
-        let allWeapons: [WeaponsType] = [.bow, .dagger, .saber, .slicer, .spectre, .sword]
-        let randomWeapon = Int.random(in: 0...5)
-        let trunk = allWeapons[randomWeapon]
-        
+        let trunk = trunk
         if self.life < 35 {
-            print("\(self.name) the \(self.style) can change his weapon from a power of \(self.weapon.power) by a \(trunk) with \(self.weapon.power) power")
+            print("\(self.name) the \(self.style) can change his weapon from a power of \(self.weapon.power) by a \(trunk.name) with \(trunk.power) power")
             var choice: Int?
             repeat {
-                print("1 - yes, change my \(self.weapon.name) by : \(trunk)")
+                print("1 - yes, change my \(self.weapon.name) by : \(trunk.name)")
                 print("2 - no....thanks")
                 choice = Int(readLine()!)
             } while choice != 1 && choice != 2
             
+            //let weaponChoice = changeChoice
             if choice == 1 {
-                self.weapon = Weapon(type: trunk)
+                self.weapon = trunk
             }
         }
     }

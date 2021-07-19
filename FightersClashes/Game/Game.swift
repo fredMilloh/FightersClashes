@@ -28,7 +28,7 @@ extension Game {
     private func createTeams() {
         [player1, player2].enumerated().forEach { (index, player) in
             
-            player.giveTeamName(index: index, player: player)
+            player.giveTeamName(index: index)
             
             print("Each player forms a team of 3 fighters :")
             
@@ -56,6 +56,7 @@ extension Game {
     private func startBattle() {
         
         repeat {
+            
             var soldier = player1.chooseFighter()
             var foe = player2.chooseFoe()
             
@@ -84,10 +85,10 @@ extension Game {
         player1.teamStatus(player: player1)
         player2.teamStatus(player: player2)
         
-        if player1.fighters.count == 0 {
-            print("The winner is \(player1.playerName) in \(numberOfRounds) rounds....congratulations !")
-        } else {
+        if player1.totalLivesPoint() == 0 {
             print("The winner is \(player2.playerName) in \(numberOfRounds) rounds....congratulations !")
+        } else {
+            print("The winner is \(player1.playerName) in \(numberOfRounds) rounds....congratulations !")
         }
     }
 }

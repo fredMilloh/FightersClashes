@@ -19,14 +19,19 @@ class Players {
      
 //MARK: - Team name
     
-    func giveTeamName(index: Int, player: Players) {
+    //private var readName: String {
+    //    let name = readLine()?.uppercased()
+    //    return name ?? "rambo"
+    //}
+    
+    func giveTeamName(index: Int) {
         repeat {
             print("\n")
             print("give a PLAYER NAME for TEAM \(index + 1): ")
-            player.playerName = readLine()?.uppercased() ?? "rambo"
-        } while player.playerName == "" || player.playerName == " " || player.playerName == "  "
+            playerName = readLine()?.uppercased() ?? "rambo"
+        } while playerName == "" || playerName == " " || playerName == "  "
             
-        print("the player name of team \(index + 1) is \(player.playerName)")
+        print("the player name of team \(index + 1) is \(playerName)")
         print("\n")
     }
     
@@ -198,7 +203,7 @@ class Players {
             }
     }
     
-//MARK: Control game
+//MARK: - Control game
     
     func totalLivesPoint() -> Int {
         var teamLives = 0
