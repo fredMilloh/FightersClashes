@@ -20,4 +20,4 @@ Game over
 - when all the fighters of a team have no more life, the game is over
 - the winner is the team with at least one living fighter
 
-
+![DiagClass](https://user-images.githubusercontent.com/47221695/126170474-31ce5c54-78a6-41a7-9933-0c91eb75f5e4.png)
