@@ -6,7 +6,7 @@ Added a new target "Unit Testing Bundle", for unit tests.
 Game :
 - each player chooses a name for his team
 - each player builds his team of 3 fighters
-- each player chooses a style and a weapon, and gives a name to each fighter
+- each player chooses a style of fighter, a weapon, and gives a name to each fighter
 
 Fighter :
 - the first player chooses a fighter from his team
