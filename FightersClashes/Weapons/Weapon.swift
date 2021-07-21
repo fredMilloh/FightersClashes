@@ -7,35 +7,13 @@
 
 import Foundation
 
-class Weapon {
-   
-    var type: WeaponsType
+class Weapons {
+    
     var name: String
     var power: Int
     
-    init(type: WeaponsType) {
-        
-        self.type = type
-       
-        switch self.type {
-        case .bow:
-            self.name = "blow"
-            self.power = 35
-        case .dagger:
-            self.name = "dagger"
-            self.power = 25
-        case .saber:
-            self.name = "saber"
-            self.power = 50
-        case .slicer:
-            self.name = "slicer"
-            self.power = 45
-        case .sword:
-            self.name = "sword"
-            self.power = 30
-        case .spectre:
-            self.name = "spectre"
-            self.power = 55
-        }
+    init(power: Int, name: String) {
+        self.power = power
+        self.name = name
     }
 }
