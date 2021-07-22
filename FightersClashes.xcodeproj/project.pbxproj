@@ -12,8 +12,6 @@
 		B6092838268CAEAB00F897E5 /* FighterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092837268CAEAB00F897E5 /* FighterType.swift */; };
 		B609283A268CAF1000F897E5 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092839268CAF1000F897E5 /* Fighter.swift */; };
 		B609283D268CC2ED00F897E5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B609283C268CC2ED00F897E5 /* Player.swift */; };
-		B609285E2693396800F897E5 /* FightersTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B609285D2693396800F897E5 /* FightersTestCase.swift */; };
-		B60928602693433000F897E5 /* PlayersTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B609285F2693433000F897E5 /* PlayersTestCase.swift */; };
 		B63115EB269CA6890029848E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63115EA269CA6890029848E /* Game.swift */; };
 		B631163B269F67FA0029848E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092820268CABED00F897E5 /* main.swift */; };
 		B631163C269F67FF0029848E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B609283C268CC2ED00F897E5 /* Player.swift */; };
@@ -33,6 +31,20 @@
 		B631170026A8985B0029848E /* Gladiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116FF26A8985B0029848E /* Gladiator.swift */; };
 		B631170226A898740029848E /* Knight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631170126A898740029848E /* Knight.swift */; };
 		B631170426A898880029848E /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631170326A898880029848E /* Mage.swift */; };
+		B631172726A96B0E0029848E /* FighterTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631172626A96B0E0029848E /* FighterTestCase.swift */; };
+		B631172826A96B1F0029848E /* Spectre.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116F726A897910029848E /* Spectre.swift */; };
+		B631172926A96B220029848E /* Slicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116F526A897740029848E /* Slicer.swift */; };
+		B631172A26A96B260029848E /* Dagger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116F326A897590029848E /* Dagger.swift */; };
+		B631172B26A96B2B0029848E /* Saber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116F126A897410029848E /* Saber.swift */; };
+		B631172C26A96B300029848E /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116EF26A897180029848E /* Sword.swift */; };
+		B631172D26A96B330029848E /* Bow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116ED26A897010029848E /* Bow.swift */; };
+		B631172E26A96B3E0029848E /* Mage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631170326A898880029848E /* Mage.swift */; };
+		B631172F26A96B420029848E /* Knight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631170126A898740029848E /* Knight.swift */; };
+		B631173026A96B450029848E /* Gladiator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116FF26A8985B0029848E /* Gladiator.swift */; };
+		B631173126A96B480029848E /* Samurai.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116FD26A898420029848E /* Samurai.swift */; };
+		B631173226A96B4C0029848E /* Barbarian.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116FB26A8980D0029848E /* Barbarian.swift */; };
+		B631173326A96B4F0029848E /* Archer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116F926A897F70029848E /* Archer.swift */; };
+		B631173726A9728E0029848E /* FighterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631173626A9728E0029848E /* FighterMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,8 +68,6 @@
 		B609283C268CC2ED00F897E5 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B609285526903DC900F897E5 /* FightersClashesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightersClashesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B609285926903DC900F897E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B609285D2693396800F897E5 /* FightersTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightersTestCase.swift; sourceTree = "<group>"; };
-		B609285F2693433000F897E5 /* PlayersTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersTestCase.swift; sourceTree = "<group>"; };
 		B63115EA269CA6890029848E /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B63116ED26A897010029848E /* Bow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bow.swift; sourceTree = "<group>"; };
 		B63116EF26A897180029848E /* Sword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sword.swift; sourceTree = "<group>"; };
@@ -71,6 +81,8 @@
 		B63116FF26A8985B0029848E /* Gladiator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gladiator.swift; sourceTree = "<group>"; };
 		B631170126A898740029848E /* Knight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Knight.swift; sourceTree = "<group>"; };
 		B631170326A898880029848E /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
+		B631172626A96B0E0029848E /* FighterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterTestCase.swift; sourceTree = "<group>"; };
+		B631173626A9728E0029848E /* FighterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				B609285926903DC900F897E5 /* Info.plist */,
-				B609285D2693396800F897E5 /* FightersTestCase.swift */,
-				B609285F2693433000F897E5 /* PlayersTestCase.swift */,
+				B631172626A96B0E0029848E /* FighterTestCase.swift */,
+				B631173626A9728E0029848E /* FighterMock.swift */,
 			);
 			path = FightersClashesTests;
 			sourceTree = "<group>";
@@ -283,13 +295,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				B631163F269F68150029848E /* Fighter.swift in Sources */,
+				B631173026A96B450029848E /* Gladiator.swift in Sources */,
 				B631163C269F67FF0029848E /* Player.swift in Sources */,
+				B631172926A96B220029848E /* Slicer.swift in Sources */,
 				B631163D269F68030029848E /* Game.swift in Sources */,
-				B60928602693433000F897E5 /* PlayersTestCase.swift in Sources */,
-				B609285E2693396800F897E5 /* FightersTestCase.swift in Sources */,
+				B631172F26A96B420029848E /* Knight.swift in Sources */,
 				B631163B269F67FA0029848E /* main.swift in Sources */,
+				B631173726A9728E0029848E /* FighterMock.swift in Sources */,
+				B631172D26A96B330029848E /* Bow.swift in Sources */,
+				B631172C26A96B300029848E /* Sword.swift in Sources */,
+				B631172B26A96B2B0029848E /* Saber.swift in Sources */,
 				B631163E269F68070029848E /* FighterType.swift in Sources */,
+				B631173126A96B480029848E /* Samurai.swift in Sources */,
 				B6311641269F68240029848E /* Weapon.swift in Sources */,
+				B631172A26A96B260029848E /* Dagger.swift in Sources */,
+				B631172826A96B1F0029848E /* Spectre.swift in Sources */,
+				B631173326A96B4F0029848E /* Archer.swift in Sources */,
+				B631172726A96B0E0029848E /* FighterTestCase.swift in Sources */,
+				B631173226A96B4C0029848E /* Barbarian.swift in Sources */,
+				B631172E26A96B3E0029848E /* Mage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
