@@ -4,15 +4,15 @@ interaction in the console with the readLine() method.
 Added a new target "Unit Testing Bundle", for unit tests.
 
 Game :
-- each player chooses a name for his team
+- each player chooses a name
 - each player builds his team of 3 fighters
-- each player chooses a style of fighter, a weapon, and gives a name to each fighter
+- each player chooses a fighter and gives a different name to each fighter
 
 Fighter :
-- the first player chooses a fighter from his team
-- then an opponent in the opposite team
+- the first player chooses a attacker from his team
+- then an adversary in the opposite team
 - he chooses the fight or give life points to his fighter
-- the power of the weapon hurts the opponent (less life points)
+- the power of the weapon hurts the adversary (less life points)
 - It's player 2's turn to choose a fighter, etc..
 - Randomly a change of weapon can be proposed to the combatant playing his turn
 
@@ -20,4 +20,4 @@ Game over
 - when all the fighters of a team have no more life, the game is over
 - the winner is the team with at least one living fighter
 
-![DiagClass](https://user-images.githubusercontent.com/47221695/126170474-31ce5c54-78a6-41a7-9933-0c91eb75f5e4.png)
+![FightersClashesClass](https://user-images.githubusercontent.com/47221695/127015672-abc106a6-b9e1-4ada-b885-cb75f46d8759.png)
