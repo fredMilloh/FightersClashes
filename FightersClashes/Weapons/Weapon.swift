@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Weapons {
+class Weapon {
     
     var name: String
     var power: Int

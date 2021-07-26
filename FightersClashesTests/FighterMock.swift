@@ -12,9 +12,9 @@ class FighterMock: Fighter {
     var fighterMockName: String
     var fighterMockType: FighterType
     var fighterMockLife: Int
-    var fighterMockWeapon: Weapons
+    var fighterMockWeapon: Weapon
     
-    init(fighterMockName: String, fighterMockType: FighterType, fighterMockLife: Int, fighterMockWeapon: Weapons) {
+    init(fighterMockName: String, fighterMockType: FighterType, fighterMockLife: Int, fighterMockWeapon: Weapon) {
         self.fighterMockName = fighterMockName
         self.fighterMockType = fighterMockType
         self.fighterMockLife = fighterMockLife

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Saber: Weapons {
+class Saber: Weapon {
     
     init() {
         super.init(power: 50, name: "saber")

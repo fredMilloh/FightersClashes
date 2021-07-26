@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Spectre: Weapons {
+class Spectre: Weapon {
     
     init() {
         super.init(power: 60, name: "spectre")

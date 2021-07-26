@@ -12,9 +12,9 @@ class Fighter {
     var name: String
     var type: FighterType
     var life: Int
-    var weapon: Weapons
+    var weapon: Weapon
     
-    init(name: String, type: FighterType, life: Int, weapon: Weapons) {
+    init(name: String, type: FighterType, life: Int, weapon: Weapon) {
         self.name = name
         self.type = type
         self.life = life
@@ -42,8 +42,8 @@ class Fighter {
     // MARK: - Change Weapon
     
     // random weapon proposal
-    private var trunkWeapon: Weapons {
-        let allWeapons: [Weapons] = [Bow(), Sword(), Saber(), Dagger(), Slicer(), Spectre()]
+    private var trunkWeapon: Weapon {
+        let allWeapons: [Weapon] = [Bow(), Sword(), Saber(), Dagger(), Slicer(), Spectre()]
         let randomWeapon = Int.random(in: 0...5)
         return allWeapons[randomWeapon]
     }
