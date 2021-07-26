@@ -1,7 +1,7 @@
 # FightersClashes
 RPG game model in macOS project, "Command Line Tool" template, 
 interaction in the console with the readLine() method. 
-Added a new target "Unit Testing Bundle", for unit tests.
+Added a new target "Unit Testing Bundle", for some unit tests.
 
 Game :
 - each player chooses a name
