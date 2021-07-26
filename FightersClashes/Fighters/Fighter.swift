@@ -25,12 +25,13 @@ class Fighter {
         return ("\(self.name) the \(self.type) with \(self.life) points of life, his \(self.weapon.name) wounds of \(self.weapon.power) points.")
     }
     
-    func hurt(foe: Fighter) {
-        foe.life -= weapon.power
-        if foe.life < 0 {
-            foe.life = 0
+    // damage of the attack on the adversary
+    func hurt(adversary: Fighter) {
+        adversary.life -= weapon.power
+        if adversary.life < 0 {
+            adversary.life = 0
         }
-        print("\(foe.name) is wounded, he has \(foe.life) life points left")
+        print("\(adversary.name) is wounded, he has \(adversary.life) life points left")
     }
     
     func care() {
@@ -38,26 +39,35 @@ class Fighter {
         print("\(self.name) the \(self.type) has now 30 more life points !")
     }
  
-// MARK: - Change Weapon
+    // MARK: - Change Weapon
     
+    // random weapon proposal
     private var trunkWeapon: Weapons {
         let allWeapons: [Weapons] = [Bow(), Sword(), Saber(), Dagger(), Slicer(), Spectre()]
         let randomWeapon = Int.random(in: 0...5)
         return allWeapons[randomWeapon]
     }
     
+    private func readChoice() -> Int {
+        Int(readLine()!)!
+    }
+    
+     private var choiceOfChange: Int {
+        var choice: Int?
+        repeat {
+            print("1 - yes, change my \(self.weapon.name) by : \(trunkWeapon.name)")
+            print("2 - no....thanks")
+            choice = readChoice()
+        } while choice != 1 && choice != 2
+        return choice!
+    }
+    
     func changeWeapon() {
         let trunkWeapon = trunkWeapon
         if self.life < 35 {
             print("\(self.name) the \(self.type) can change his weapon from a power of \(self.weapon.power) by a \(trunkWeapon.name) with \(trunkWeapon.power) power")
-            var choice: Int?
-            repeat {
-                print("1 - yes, change my \(self.weapon.name) by : \(trunkWeapon.name)")
-                print("2 - no....thanks")
-                choice = Int(readLine()!)
-            } while choice != 1 && choice != 2
             
-            //let weaponChoice = changeChoice
+            let choice = choiceOfChange
             if choice == 1 {
                 self.weapon = trunkWeapon
             }

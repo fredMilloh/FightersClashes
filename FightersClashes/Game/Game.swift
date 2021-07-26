@@ -11,8 +11,8 @@ class Game {
     
     var player1 = Player(playerName: "", fighters: [])
     var player2 = Player(playerName: "", fighters: [])
-    var winner: Player?
-    var namesUsed = [String]()
+    private var winner: Player?
+    private var namesUsed = [String]()
     
     private var numberOfRounds = 0
     
@@ -30,6 +30,7 @@ extension Game {
         [player1, player2].enumerated().forEach { (index, player) in
             
             // Define player name
+            
             player.setPlayerName(at: index)
             
             // Define team
@@ -61,19 +62,19 @@ extension Game {
         
         repeat {
             
-            var soldier = player1.chooseFighter()
-            var foe = player2.chooseFoe()
+            var attacker = player1.chooseAttacker()
+            var adversary = player2.chooseAdversary()
             
-            print("it's \(soldier.name) turn to face \(foe.name)")
-            player1.chooseAction(soldier: soldier, foe: foe)
+            print("it's \(attacker.name) turn to face \(adversary.name)")
+            player1.chooseAction(attacker: attacker, adversary: adversary)
             
             numberOfRounds += 1
             
-            soldier = player2.chooseFighter()
-            foe = player1.chooseFoe()
+            attacker = player2.chooseAttacker()
+            adversary = player1.chooseAdversary()
             
-            print("it's \(soldier.name) turn to face \(foe.name)")
-            player2.chooseAction(soldier: soldier, foe: foe)
+            print("it's \(attacker.name) turn to face \(adversary.name)")
+            player2.chooseAction(attacker: attacker, adversary: adversary)
             
             numberOfRounds += 1
             
@@ -83,7 +84,7 @@ extension Game {
         showWinner()
     }
     
-    private func showWinner() {
+     private func showWinner() {
         // status of the teams and winner of the game
         print("\n")
         player1.playerStatus(player: player1)
@@ -94,7 +95,7 @@ extension Game {
         print("\n")
     }
     
-    private func playersAreAlive() -> Bool {
+     func playersAreAlive() -> Bool {
         let firstTeam = player1.fighters
         let secondTeam = player2.fighters
         

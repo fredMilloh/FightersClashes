@@ -45,6 +45,9 @@
 		B631173226A96B4C0029848E /* Barbarian.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116FB26A8980D0029848E /* Barbarian.swift */; };
 		B631173326A96B4F0029848E /* Archer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116F926A897F70029848E /* Archer.swift */; };
 		B631173726A9728E0029848E /* FighterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631173626A9728E0029848E /* FighterMock.swift */; };
+		B631173926A9AA460029848E /* PlayerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631173826A9AA460029848E /* PlayerMock.swift */; };
+		B631173B26A9AB9E0029848E /* PlayerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B631173A26A9AB9E0029848E /* PlayerTestCase.swift */; };
+		B6BED14226AC83BD00085159 /* GameTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BED14126AC83BD00085159 /* GameTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -83,6 +86,9 @@
 		B631170326A898880029848E /* Mage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mage.swift; sourceTree = "<group>"; };
 		B631172626A96B0E0029848E /* FighterTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterTestCase.swift; sourceTree = "<group>"; };
 		B631173626A9728E0029848E /* FighterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterMock.swift; sourceTree = "<group>"; };
+		B631173826A9AA460029848E /* PlayerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMock.swift; sourceTree = "<group>"; };
+		B631173A26A9AB9E0029848E /* PlayerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTestCase.swift; sourceTree = "<group>"; };
+		B6BED14126AC83BD00085159 /* GameTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +174,9 @@
 				B609285926903DC900F897E5 /* Info.plist */,
 				B631172626A96B0E0029848E /* FighterTestCase.swift */,
 				B631173626A9728E0029848E /* FighterMock.swift */,
+				B631173826A9AA460029848E /* PlayerMock.swift */,
+				B631173A26A9AB9E0029848E /* PlayerTestCase.swift */,
+				B6BED14126AC83BD00085159 /* GameTestCase.swift */,
 			);
 			path = FightersClashesTests;
 			sourceTree = "<group>";
@@ -294,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B631173926A9AA460029848E /* PlayerMock.swift in Sources */,
 				B631163F269F68150029848E /* Fighter.swift in Sources */,
 				B631173026A96B450029848E /* Gladiator.swift in Sources */,
 				B631163C269F67FF0029848E /* Player.swift in Sources */,
@@ -305,6 +315,8 @@
 				B631172D26A96B330029848E /* Bow.swift in Sources */,
 				B631172C26A96B300029848E /* Sword.swift in Sources */,
 				B631172B26A96B2B0029848E /* Saber.swift in Sources */,
+				B6BED14226AC83BD00085159 /* GameTestCase.swift in Sources */,
+				B631173B26A9AB9E0029848E /* PlayerTestCase.swift in Sources */,
 				B631163E269F68070029848E /* FighterType.swift in Sources */,
 				B631173126A96B480029848E /* Samurai.swift in Sources */,
 				B6311641269F68240029848E /* Weapon.swift in Sources */,

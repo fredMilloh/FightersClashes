@@ -19,19 +19,23 @@ class Player {
 
     // MARK: - Player name
     
+    private func readName() -> String {
+        readLine()!
+    }
+    
     func setPlayerName(at index: Int) {
         repeat {
             print("\n")
             print("give a PLAYER NAME for TEAM \(index + 1): ")
-            let name = readLine()?.uppercased()
-            playerName = name ?? "Rambo"
+            let name = readName().uppercased()
+            playerName = name
         } while playerName.isEmpty
-            
+
         print("the player name of team \(index + 1) is \(playerName)")
         print("\n")
     }
 
-    // MARK: -  Configure player's fighters
+    // MARK: -  Configure player's
     
     private var choiceFighter: Int {
         var choice: Int?
@@ -47,7 +51,7 @@ class Player {
         } while choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 5 && choice != 6
         return choice!
     }
-                
+    
     func chooseFighter(index: Int) -> Fighter {
         print("\n")
         print("\(playerName) chooses fighter n° \(index) for his team :")
@@ -74,12 +78,12 @@ class Player {
             nameFighter = readLine()?.uppercased()
         } while nameFighter == nil
                 
-            return nameFighter ?? "rambo"
+        return nameFighter ?? "rambo"
     }
     
     // MARK: - Player Round
     
-    func chooseFighter() -> Fighter {
+    func chooseAttacker() -> Fighter {
         var teamMember: Int?
         var choice = [Int]()
         //the "choice" variables allow to select only the fighters with life
@@ -88,7 +92,7 @@ class Player {
         var choice3: Int?
         repeat {
             print("\n")
-            print("\(playerName) choose his fighter :")
+            print("\(playerName) choose his attacker :")
             for i in 1...fighters.count {
                 if fighters[i - 1].life > 0 {
                     choice.append(i)
@@ -114,14 +118,14 @@ class Player {
         return fighters[(teamMember ?? 1) - 1]
     }
     
-    func chooseFoe() -> Fighter {
+    func chooseAdversary() -> Fighter {
         var challenger: Int?
         var choice = [Int]()
         var choice1: Int?
         var choice2: Int?
         var choice3: Int?
         repeat {
-            print("And choose his foe :")
+            print("And choose his adversary :")
             for i in 1...3 {
                 if fighters[i - 1].life > 0 {
                     choice.append(i)
@@ -146,20 +150,20 @@ class Player {
             return fighters[(challenger ?? 1) - 1]
     }
     
-    func chooseAction(soldier: Fighter, foe: Fighter) {
+    func chooseAction(attacker: Fighter, adversary: Fighter) {
         var action: Int?
         repeat {
             print("What is your strategy :")
-            print("1 - Fight : \(soldier.name) the \(soldier.type) attacks \(foe.name) the \(foe.type) ")
-            print("2 - Care : \(playerName) gives life points to his fighter \(soldier.name) the \(soldier.type)")
+            print("1 - Fight : \(attacker.name) the \(attacker.type) attacks \(adversary.name) the \(adversary.type) ")
+            print("2 - Care : \(playerName) gives life points to his attacker \(attacker.name) the \(attacker.type)")
             action = Int(readLine()!)
         } while action != 1 && action != 2
                 
             if action == 1 {
-                soldier.hurt(foe: foe)
-                soldier.changeWeapon()
+                attacker.hurt(adversary: adversary)
+                attacker.changeWeapon()
             } else {
-                soldier.care()
+                attacker.care()
             }
     }
     

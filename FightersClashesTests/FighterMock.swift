@@ -23,6 +23,11 @@ class FighterMock: Fighter {
     }
     
     override func changeWeapon() {
-        self.fighterMockWeapon = Slicer()
+        if self.fighterMockLife < 35 {
+            self.fighterMockWeapon = Slicer()
+        }
     }
+    
+    
+    
 }
