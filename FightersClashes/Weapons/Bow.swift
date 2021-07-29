@@ -8,7 +8,8 @@
 import Foundation
 
 class Bow: Weapon {
+    
     init() {
-        super.init(power: 35, name: "bow")
+        super.init(power: 40, name: "bow")
     }
 }

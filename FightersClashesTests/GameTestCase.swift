@@ -9,12 +9,12 @@ import XCTest
 
 class GameTestCase: XCTestCase {
     
-    let tiery = Fighter(name: "tiery", type: .archer, life: 95, weapon: .init(power: 35, name: "bow"))
-    let klos = Fighter(name: "klos", type: .barbarian, life: 105, weapon: .init(power: 40, name: "dagger"))
-    let yoshi = Fighter(name: "yoshi", type: .samurai, life: 110, weapon: .init(power: 50, name: "saber"))
-    let pepone = Fighter(name: "pepone", type: .gladiator, life: 100, weapon: .init(power: 55, name: "slicer"))
-    let eon = Fighter(name: "eon", type: .knight, life: 90, weapon: .init(power: 45, name: "sword"))
-    let dumbledore = Fighter(name: "dumbledore", type: .mage, life: 120, weapon: .init(power: 60, name: "spectre"))
+    let tiery = Fighter(name: "tiery", type: "archer", life: 95, weapon: .init(power: 35, name: "bow"))
+    let klos = Fighter(name: "klos", type: "barbarian", life: 105, weapon: .init(power: 40, name: "dagger"))
+    let yoshi = Fighter(name: "yoshi", type: "samurai", life: 110, weapon: .init(power: 50, name: "saber"))
+    let pepone = Fighter(name: "pepone", type: "gladiator", life: 100, weapon: .init(power: 55, name: "slicer"))
+    let eon = Fighter(name: "eon", type: "knight", life: 90, weapon: .init(power: 45, name: "sword"))
+    let dumbledore = Fighter(name: "dumbledore", type: "mage", life: 120, weapon: .init(power: 60, name: "spectre"))
     
     func test_when_all_life_fighters_are_upper_0_then_playersAreAlive_method_is_true() {
         let team1 = [tiery, klos, yoshi]

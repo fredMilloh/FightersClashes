@@ -9,14 +9,12 @@
 /* Begin PBXBuildFile section */
 		B6092821268CABED00F897E5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092820268CABED00F897E5 /* main.swift */; };
 		B6092828268CAC1E00F897E5 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092827268CAC1E00F897E5 /* Weapon.swift */; };
-		B6092838268CAEAB00F897E5 /* FighterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092837268CAEAB00F897E5 /* FighterType.swift */; };
 		B609283A268CAF1000F897E5 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092839268CAF1000F897E5 /* Fighter.swift */; };
 		B609283D268CC2ED00F897E5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B609283C268CC2ED00F897E5 /* Player.swift */; };
 		B63115EB269CA6890029848E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63115EA269CA6890029848E /* Game.swift */; };
 		B631163B269F67FA0029848E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092820268CABED00F897E5 /* main.swift */; };
 		B631163C269F67FF0029848E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B609283C268CC2ED00F897E5 /* Player.swift */; };
 		B631163D269F68030029848E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63115EA269CA6890029848E /* Game.swift */; };
-		B631163E269F68070029848E /* FighterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092837268CAEAB00F897E5 /* FighterType.swift */; };
 		B631163F269F68150029848E /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092839268CAF1000F897E5 /* Fighter.swift */; };
 		B6311641269F68240029848E /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6092827268CAC1E00F897E5 /* Weapon.swift */; };
 		B63116EE26A897010029848E /* Bow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63116ED26A897010029848E /* Bow.swift */; };
@@ -66,7 +64,6 @@
 		B609281D268CABED00F897E5 /* FightersClashes */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FightersClashes; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6092820268CABED00F897E5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B6092827268CAC1E00F897E5 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
-		B6092837268CAEAB00F897E5 /* FighterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FighterType.swift; sourceTree = "<group>"; };
 		B6092839268CAF1000F897E5 /* Fighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
 		B609283C268CC2ED00F897E5 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B609285526903DC900F897E5 /* FightersClashesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FightersClashesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,7 +153,6 @@
 		B609282A268CAC5200F897E5 /* Fighters */ = {
 			isa = PBXGroup;
 			children = (
-				B6092837268CAEAB00F897E5 /* FighterType.swift */,
 				B6092839268CAF1000F897E5 /* Fighter.swift */,
 				B63116F926A897F70029848E /* Archer.swift */,
 				B63116FB26A8980D0029848E /* Barbarian.swift */,
@@ -294,7 +290,6 @@
 				B63116F026A897180029848E /* Sword.swift in Sources */,
 				B63116FA26A897F70029848E /* Archer.swift in Sources */,
 				B63116F426A897590029848E /* Dagger.swift in Sources */,
-				B6092838268CAEAB00F897E5 /* FighterType.swift in Sources */,
 				B609283D268CC2ED00F897E5 /* Player.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +312,6 @@
 				B631172B26A96B2B0029848E /* Saber.swift in Sources */,
 				B6BED14226AC83BD00085159 /* GameTestCase.swift in Sources */,
 				B631173B26A9AB9E0029848E /* PlayerTestCase.swift in Sources */,
-				B631163E269F68070029848E /* FighterType.swift in Sources */,
 				B631173126A96B480029848E /* Samurai.swift in Sources */,
 				B6311641269F68240029848E /* Weapon.swift in Sources */,
 				B631172A26A96B260029848E /* Dagger.swift in Sources */,

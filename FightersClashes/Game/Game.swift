@@ -11,6 +11,7 @@ class Game {
     
     var player1 = Player(playerName: "", fighters: [])
     var player2 = Player(playerName: "", fighters: [])
+    
     private var winner: Player?
     private var namesUsed = [String]()
     
@@ -19,6 +20,7 @@ class Game {
     func start() {
         createTeams()
         startBattle()
+        showWinner()
     }
 }
 
@@ -27,24 +29,34 @@ class Game {
 extension Game {
     
     private func createTeams() {
+        print("The game starts, each player gives himself a name.")
         [player1, player2].enumerated().forEach { (index, player) in
             
             // Define player name
-            
-            player.setPlayerName(at: index)
-            
+            while player.playerName.isEmpty {
+                var namePlayer = player.setPlayerName(at: index)
+
+                for name in namesUsed {
+                    if namePlayer == name {
+                        print("This name is already in use !")
+                        namePlayer = player.setPlayerName(at: index)
+                    }
+                }
+                namesUsed.append(namePlayer)
+                player.playerName = namePlayer
+            }
+            print("the player name of team \(index + 1) is \(player.playerName)")
+            print("\n")
             // Define team
-            print("Each player forms a team of 3 fighters :")
+            print("And each player forms a team of 3 fighters :")
             
             while player.fighters.count < 3 {
                 
-                
                 let i = player.fighters.count + 1
-                let selectedFighter = player.chooseFighter(index: i)
+                let selectedFighter = player.getTeamFighter(index: i)
                 var nameFighter = player.setFighterName(type: selectedFighter)
                 
-        // Name control used
-
+                // Name control used
                 for name in namesUsed {
                     if nameFighter == name {
                         print("This name is already in use !")
@@ -56,33 +68,31 @@ extension Game {
                 player.fighters.append(fighter)
             }
         }
+        print("\n")
+        print("the two teams are now created.")
+        print("Each player takes a turn, the player 1 \(player1.playerName) starts.")
+        print("Good fight .... and may the best win ....")
     }
     
     private func startBattle() {
+        var player = player1
+        var challenger = player2
         
-        repeat {
-            
-            var attacker = player1.chooseAttacker()
-            var adversary = player2.chooseAdversary()
-            
-            print("it's \(attacker.name) turn to face \(adversary.name)")
-            player1.chooseAction(attacker: attacker, adversary: adversary)
-            
+        while fightersAreAlive() {
+            let attacker = player.chooseAttacker()
+            attacker.changeWeapon()
+            let opponent = challenger.chooseOpponent()
+                
+            print("it's \(attacker.name) turn to face \(opponent.name)")
+            player.chooseAction(attacker: attacker, opponent: opponent)
+                
             numberOfRounds += 1
-            
-            attacker = player2.chooseAttacker()
-            adversary = player1.chooseAdversary()
-            
-            print("it's \(attacker.name) turn to face \(adversary.name)")
-            player2.chooseAction(attacker: attacker, adversary: adversary)
-            
-            numberOfRounds += 1
-            
-            
-        } while playersAreAlive()
-        
-        showWinner()
+            swap(&player, &challenger)
+        }
+        print("\n")
+        print("                      ***** GAME OVER *****")
     }
+    
     
      private func showWinner() {
         // status of the teams and winner of the game
@@ -95,20 +105,18 @@ extension Game {
         print("\n")
     }
     
-     func playersAreAlive() -> Bool {
-        let firstTeam = player1.fighters
-        let secondTeam = player2.fighters
-        
-        let atLeastOneFighterOfFirstTeamIsAlive = firstTeam.first(where: { $0.life > 0 }) != nil
-        let atLeastOneFighterOfSecondTeamIsAlive = secondTeam.first(where: { $0.life > 0 }) != nil
-        
-        if !atLeastOneFighterOfFirstTeamIsAlive {
+     private func fightersAreAlive() -> Bool {
+        let team1 = player1.playersLifePoints()
+        let team2 = player2.playersLifePoints()
+        if team1 == 0 {
             winner = player2
         }
-        if !atLeastOneFighterOfSecondTeamIsAlive {
+        if team2 == 0 {
             winner = player1
         }
-        
-        return atLeastOneFighterOfFirstTeamIsAlive && atLeastOneFighterOfSecondTeamIsAlive
+        // true && true ==> true (game in progress)
+        // true && false ==> false (game over)
+        // vs true || false ==> true
+        return team1 > 0 && team2 > 0
     }
 }

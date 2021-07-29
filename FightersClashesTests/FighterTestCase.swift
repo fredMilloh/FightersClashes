@@ -28,7 +28,7 @@ class FighterTestCase: XCTestCase {
         let soldier1 = Archer()
         let soldier2 = Samurai()
         
-        soldier1.hurt(adversary: soldier2)
+        soldier1.hurt(opponent: soldier2)
         
         XCTAssertEqual(soldier2.life, 75)
     }
@@ -39,7 +39,7 @@ class FighterTestCase: XCTestCase {
         let soldier2 = Knight()
         soldier2.life = 25
         
-        soldier1.hurt(adversary: soldier2)
+        soldier1.hurt(opponent: soldier2)
         
         XCTAssertEqual(soldier2.life, 0)
     }
@@ -55,7 +55,7 @@ class FighterTestCase: XCTestCase {
     
     func test_when_soldier_has_life_under_35_and_change_weapon_then_have_a_new_weapon() {
         
-        let soldier = FighterMock(fighterMockName: "soldier", fighterMockType: .samurai, fighterMockLife: 25, fighterMockWeapon: .init(power: 100, name: "rope"))
+        let soldier = FighterMock(fighterMockName: "soldier", fighterMockType: "samurai", fighterMockLife: 25, fighterMockWeapon: .init(power: 100, name: "rope"))
         
         soldier.changeWeapon()
         
@@ -63,7 +63,7 @@ class FighterTestCase: XCTestCase {
     }
     
     func test_when_soldier_has_life_upper_35_he_can_not_change_weapon() {
-        let soldier = FighterMock(fighterMockName: "soldier", fighterMockType: .samurai, fighterMockLife: 70, fighterMockWeapon: .init(power: 100, name: "rope"))
+        let soldier = FighterMock(fighterMockName: "soldier", fighterMockType: "samurai", fighterMockLife: 70, fighterMockWeapon: .init(power: 100, name: "rope"))
         
         soldier.changeWeapon()
         

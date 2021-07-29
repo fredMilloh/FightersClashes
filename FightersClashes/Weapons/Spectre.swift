@@ -10,6 +10,6 @@ import Foundation
 class Spectre: Weapon {
     
     init() {
-        super.init(power: 60, name: "spectre")
+        super.init(power: 70, name: "spectre")
     }
 }

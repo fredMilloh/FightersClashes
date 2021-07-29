@@ -10,6 +10,6 @@ import Foundation
 class Samurai: Fighter {
     
     init() {
-        super.init(name: "", type: .samurai, life: 110, weapon: Saber())
+        super.init(name: "", type: "samurai", life: 110, weapon: Saber())
     }
 }

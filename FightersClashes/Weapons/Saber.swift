@@ -10,6 +10,6 @@ import Foundation
 class Saber: Weapon {
     
     init() {
-        super.init(power: 50, name: "saber")
+        super.init(power: 55, name: "saber")
     }
 }

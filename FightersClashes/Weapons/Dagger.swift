@@ -10,6 +10,6 @@ import Foundation
 class Dagger: Weapon {
     
     init() {
-        super.init(power: 40, name: "dagger")
+        super.init(power: 45, name: "dagger")
     }
 }

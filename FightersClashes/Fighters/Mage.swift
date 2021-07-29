@@ -8,7 +8,8 @@
 import Foundation
 
 class Mage: Fighter {
+    
     init() {
-        super.init(name: "", type: .mage, life: 120, weapon: Spectre())
+        super.init(name: "", type: "mage", life: 120, weapon: Spectre())
     }
 }

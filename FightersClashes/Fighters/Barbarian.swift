@@ -10,6 +10,6 @@ import Foundation
 class Barbarian: Fighter {
     
     init() {
-        super.init(name: "", type: .barbarian, life: 105, weapon: Dagger())
+        super.init(name: "", type: "barbarian", life: 105, weapon: Dagger())
     }
 }

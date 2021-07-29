@@ -10,6 +10,6 @@ import Foundation
 class Archer: Fighter {
     
     init() {
-        super.init(name: "", type: .archer, life: 95, weapon: Bow())
+        super.init(name: "", type: "archer", life: 95, weapon: Bow())
     }
 }

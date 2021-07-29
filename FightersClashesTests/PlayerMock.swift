@@ -18,15 +18,12 @@ class PlayerMock: Player {
         super.init(playerName: playerMockName, fighters: fightersMock)
     }
     
-    override func setPlayerName(at index: Int) {
-        playerName = "luc"
+    override func setPlayerName(at index: Int) -> String {
+        return  "luc"
     }
     
-    override func chooseFighter(index: Int) -> Fighter {
+    override func getTeamFighter(index: Int) -> Fighter {
         Gladiator()
     }
     
-    override func setFighterName(type: Fighter) -> String {
-        "dumbledore"
-    }
 }

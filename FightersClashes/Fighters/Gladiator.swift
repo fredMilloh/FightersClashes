@@ -8,7 +8,8 @@
 import Foundation
 
 class Gladiator: Fighter {
+    
     init() {
-        super.init(name: "", type: .gladiator, life: 100, weapon: Slicer())
+        super.init(name: "", type: "gladiator", life: 100, weapon: Slicer())
     }
 }

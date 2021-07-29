@@ -10,11 +10,13 @@ import Foundation
 class Fighter {
    
     var name: String
-    var type: FighterType
+    var type: String
     var life: Int
     var weapon: Weapon
     
-    init(name: String, type: FighterType, life: Int, weapon: Weapon) {
+    static var allFighters: [Fighter] = [Archer(), Barbarian(), Samurai(), Gladiator(), Knight(), Mage()]
+    
+    init(name: String, type: String, life: Int, weapon: Weapon) {
         self.name = name
         self.type = type
         self.life = life
@@ -22,16 +24,16 @@ class Fighter {
     }
     
     func description() -> String {
-        return ("\(self.name) the \(self.type) with \(self.life) points of life, his \(self.weapon.name) wounds of \(self.weapon.power) points.")
+        ("\(self.name) the \(self.type) with \(self.life) points of life, his \(self.weapon.name) wounds of \(self.weapon.power) points.")
     }
     
-    // damage of the attack on the adversary
-    func hurt(adversary: Fighter) {
-        adversary.life -= weapon.power
-        if adversary.life < 0 {
-            adversary.life = 0
+    // damage of the attack on the opponent
+    func hurt(opponent: Fighter) {
+        opponent.life -= weapon.power
+        if opponent.life < 0 {
+            opponent.life = 0
         }
-        print("\(adversary.name) is wounded, he has \(adversary.life) life points left")
+        print("\(opponent.name) is wounded, he has \(opponent.life) life points left")
     }
     
     func care() {
@@ -41,35 +43,24 @@ class Fighter {
  
     // MARK: - Change Weapon
     
-    // random weapon proposal
-    private var trunkWeapon: Weapon {
-        let allWeapons: [Weapon] = [Bow(), Sword(), Saber(), Dagger(), Slicer(), Spectre()]
-        let randomWeapon = Int.random(in: 0...5)
-        return allWeapons[randomWeapon]
-    }
-    
-    private func readChoice() -> Int {
-        Int(readLine()!)!
-    }
-    
-     private var choiceOfChange: Int {
-        var choice: Int?
-        repeat {
-            print("1 - yes, change my \(self.weapon.name) by : \(trunkWeapon.name)")
-            print("2 - no....thanks")
-            choice = readChoice()
-        } while choice != 1 && choice != 2
-        return choice!
-    }
-    
     func changeWeapon() {
-        let trunkWeapon = trunkWeapon
-        if self.life < 35 {
-            print("\(self.name) the \(self.type) can change his weapon from a power of \(self.weapon.power) by a \(trunkWeapon.name) with \(trunkWeapon.power) power")
+        let chestWeapon = Weapon.getRandomWeapon()
+        let randomCondition = Int.random(in: 0...10) % 2 == 1
+        
+        if randomCondition && life < 70 {
+            print("\(self.name) the \(self.type) can open this chest and exchange his weapon with the one in the chest.")
             
-            let choice = choiceOfChange
+            var choice: Int = -1
+            while (choice != 1 && choice != 2) {
+                print("1 - yes, open the chest and exchange !")
+                print("2 - no....thanks")
+                if let value = readLine(),
+                   let _choice = Int(value) {
+                    choice = _choice
+                }
+            }
             if choice == 1 {
-                self.weapon = trunkWeapon
+                self.weapon = chestWeapon
             }
         }
     }

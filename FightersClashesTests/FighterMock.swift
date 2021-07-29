@@ -10,11 +10,11 @@ import Foundation
 class FighterMock: Fighter {
     
     var fighterMockName: String
-    var fighterMockType: FighterType
+    var fighterMockType: String
     var fighterMockLife: Int
     var fighterMockWeapon: Weapon
     
-    init(fighterMockName: String, fighterMockType: FighterType, fighterMockLife: Int, fighterMockWeapon: Weapon) {
+    init(fighterMockName: String, fighterMockType: String, fighterMockLife: Int, fighterMockWeapon: Weapon) {
         self.fighterMockName = fighterMockName
         self.fighterMockType = fighterMockType
         self.fighterMockLife = fighterMockLife

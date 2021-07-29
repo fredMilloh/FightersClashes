@@ -8,7 +8,8 @@
 import Foundation
 
 class Knight: Fighter {
+    
     init() {
-        super.init(name: "", type: .knight, life: 90, weapon: Sword())
+        super.init(name: "", type: "knight", life: 90, weapon: Sword())
     }
 }

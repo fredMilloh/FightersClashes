@@ -22,9 +22,9 @@ class PlayerTestCase: XCTestCase {
         let fighters = [first, second, third]
         let playerMock = PlayerMock(playerMockName: "", fightersMock: fighters)
         
-        playerMock.setPlayerName(at: 1)
+        playerMock.playerMockName = playerMock.setPlayerName(at: 1)
         
-        XCTAssertEqual(playerMock.playerName, "luc")
+        XCTAssertEqual(playerMock.playerMockName, "luc")
     }
     
     func test_when_a_player_chooses_a_fighter_then_the_fighter_is_well_defined() {
@@ -32,9 +32,8 @@ class PlayerTestCase: XCTestCase {
         let fighters = [fourth, fifth, sixth]
         let playerMock = PlayerMock(playerMockName: "", fightersMock: fighters)
         
-        playerMock.fightersMock[0] = playerMock.chooseFighter(index: 0)
+        playerMock.fightersMock[0] = playerMock.getTeamFighter(index: 0)
         
         XCTAssertEqual(playerMock.fightersMock[0].life, 100)
     }
-    
 }
