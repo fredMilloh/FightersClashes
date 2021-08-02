@@ -90,7 +90,6 @@ class Player {
             print("What is your strategy :")
             print("1 - Fight : The fighters chosen from each team fight against ")
             print("2 - Care : \(playerName) gives life points for one of his attackers")
-            //print("2 - Care : \(playerName) gives life points to his attacker \(attacker.name) the \(attacker.type)")
             if let value = readLine(),
                let _action = Int(value) {
                 action = _action

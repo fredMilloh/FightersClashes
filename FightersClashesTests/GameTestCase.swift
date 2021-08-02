@@ -25,7 +25,7 @@ class GameTestCase: XCTestCase {
         game.player1 = player1
         game.player2 = player2
         
-        XCTAssertEqual(game.playersAreAlive(), true)
+        XCTAssertEqual(game.fightersAreAlive(), true)
     }
     
     func test_at_least_one_fighter_of_first_team_is_alive_then_game_is_true() {
@@ -40,7 +40,7 @@ class GameTestCase: XCTestCase {
         game.player1 = player1
         game.player2 = player2
         
-        XCTAssertEqual(game.playersAreAlive(), true)
+        XCTAssertEqual(game.fightersAreAlive(), true)
     }
     
     func test_when_all_fighters_life_of_a_team_are_0_then_playerAreAlive_is_false_game_stop() {
@@ -55,7 +55,7 @@ class GameTestCase: XCTestCase {
         game.player1 = player1
         game.player2 = player2
         
-        XCTAssertEqual(game.playersAreAlive(), false)
+        XCTAssertEqual(game.fightersAreAlive(), false)
     }
 
 }

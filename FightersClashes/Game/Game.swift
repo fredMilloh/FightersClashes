@@ -102,7 +102,7 @@ extension Game {
         print("\n")
     }
     
-     private func fightersAreAlive() -> Bool {
+     func fightersAreAlive() -> Bool {
         let team1 = player1.playerLifePoints()
         let team2 = player2.playerLifePoints()
         if team1 == 0 {

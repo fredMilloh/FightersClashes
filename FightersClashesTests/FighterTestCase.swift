@@ -20,7 +20,7 @@ class FighterTestCase: XCTestCase {
         let fighterDescription = conan.description()
         
         //then - assert
-        XCTAssertEqual(fighterDescription, "conan the barbarian with 105 points of life, his dagger wounds of 40 points.")
+        XCTAssertEqual(fighterDescription, "conan the barbarian with 105 points of life, his dagger wounds of 45 points.")
     }
     
     func test_when_a_soldier_hits_an_other_soldier_then_his_life_points_decrease() {
@@ -30,7 +30,7 @@ class FighterTestCase: XCTestCase {
         
         soldier1.hurt(opponent: soldier2)
         
-        XCTAssertEqual(soldier2.life, 75)
+        XCTAssertEqual(soldier2.life, 70)
     }
     
     func test_when_a_soldier_kill_an_other_soldier_then_his_life_points_remain_at_0() {
