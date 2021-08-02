@@ -156,10 +156,10 @@
 				B6092839268CAF1000F897E5 /* Fighter.swift */,
 				B63116F926A897F70029848E /* Archer.swift */,
 				B63116FB26A8980D0029848E /* Barbarian.swift */,
+				B631170326A898880029848E /* Mage.swift */,
 				B63116FD26A898420029848E /* Samurai.swift */,
 				B63116FF26A8985B0029848E /* Gladiator.swift */,
 				B631170126A898740029848E /* Knight.swift */,
-				B631170326A898880029848E /* Mage.swift */,
 			);
 			path = Fighters;
 			sourceTree = "<group>";

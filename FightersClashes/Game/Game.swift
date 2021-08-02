@@ -69,8 +69,8 @@ extension Game {
             }
         }
         print("\n")
-        print("the two teams are now created.")
-        print("Each player takes a turn, the player 1 \(player1.playerName) starts.")
+        print("The two teams are now created.")
+        print("Each player takes a turn.")
         print("Good fight .... and may the best win ....")
     }
     
@@ -79,44 +79,38 @@ extension Game {
         var challenger = player2
         
         while fightersAreAlive() {
-            let attacker = player.chooseAttacker()
-            attacker.changeWeapon()
-            let opponent = challenger.chooseOpponent()
-                
-            print("it's \(attacker.name) turn to face \(opponent.name)")
-            player.chooseAction(attacker: attacker, opponent: opponent)
-                
+            
+            print("\n")
+            print("It's \(player.playerName)'s turn to play")
+            player.chooseAction(player: player, challenger: challenger)
+          
             numberOfRounds += 1
             swap(&player, &challenger)
         }
+        
         print("\n")
         print("                      ***** GAME OVER *****")
     }
     
-    
      private func showWinner() {
-        // status of the teams and winner of the game
-        print("\n")
-        player1.playerStatus(player: player1)
-        player2.playerStatus(player: player2)
-        print("\n")
         guard let winnerName = winner?.playerName else { return }
         print("The winner is \(winnerName) in \(numberOfRounds) rounds....congratulations !")
+        print("\n")
+        // status of the teams and winner of the game
+        player1.playerStatus(player: player1)
+        player2.playerStatus(player: player2)
         print("\n")
     }
     
      private func fightersAreAlive() -> Bool {
-        let team1 = player1.playersLifePoints()
-        let team2 = player2.playersLifePoints()
+        let team1 = player1.playerLifePoints()
+        let team2 = player2.playerLifePoints()
         if team1 == 0 {
             winner = player2
         }
         if team2 == 0 {
             winner = player1
         }
-        // true && true ==> true (game in progress)
-        // true && false ==> false (game over)
-        // vs true || false ==> true
         return team1 > 0 && team2 > 0
     }
 }

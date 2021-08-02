@@ -23,6 +23,8 @@ class Fighter {
         self.weapon = weapon
     }
     
+    // MARK: - Convenience Methods
+    
     func description() -> String {
         ("\(self.name) the \(self.type) with \(self.life) points of life, his \(self.weapon.name) wounds of \(self.weapon.power) points.")
     }
@@ -36,6 +38,7 @@ class Fighter {
         print("\(opponent.name) is wounded, he has \(opponent.life) life points left")
     }
     
+    // care of the fighter
     func care() {
         self.life += 30
         print("\(self.name) the \(self.type) has now 30 more life points !")
@@ -48,7 +51,8 @@ class Fighter {
         let randomCondition = Int.random(in: 0...10) % 2 == 1
         
         if randomCondition && life < 70 {
-            print("\(self.name) the \(self.type) can open this chest and exchange his weapon with the one in the chest.")
+            print("\(self.name) the \(self.type) can open this chest,")
+            print(" and exchange his weapon with the one in the chest.")
             
             var choice: Int = -1
             while (choice != 1 && choice != 2) {
@@ -60,6 +64,9 @@ class Fighter {
                 }
             }
             if choice == 1 {
+                print("\(self.name) traded his \(self.weapon.name)")
+                print(" for a \(chestWeapon.name) with power \(chestWeapon.power) points")
+                print("\n")
                 self.weapon = chestWeapon
             }
         }
